@@ -26,19 +26,30 @@ body {
 
 .dataset {
   position: relative;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.data-head {
+.dataset div {
   position: relative;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.data-head span {
+.dataset div span {
+  width: 10%;
   padding: 1em;
   flex-grow: 1;
+}
+
+.dataset div span:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  width: 7%;
+}
+
+.dataset div:not(:first-child) span {
+  padding: 0 0 0 1em;
 }
