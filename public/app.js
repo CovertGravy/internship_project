@@ -26,4 +26,21 @@ document.addEventListener('DOMContentLoaded', e => {
   automobiles.get().then(data => {
     data.docs.forEach(doc => renderData(doc));
   });
+  // const form = document.querySelector('form');
+  // form.addEventListener('submit', e => {
+  //   e.preventDefault();
+  //   automobiles.add({
+  //     Model: form.Model.value,
+  //     MPG: form.MPG.value,
+  //     Cylinders: form.Cylinders.value,
+  //     Displacement: form.Displacement.value,
+  //     Horsepower: form.Horsepower.value,
+  //     Weight: form.Weight.value,
+  //     Acceleration: form.Acceleration.value,
+  //     Year: form.Year.value,
+  //     Origin: form.Origin.value
+  //   });
+  //   alert('added');
+  //   form.reset();
+  // });
 });
