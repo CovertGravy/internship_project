@@ -8,14 +8,12 @@ function renderData(d) {
   let div = document.createElement('div');
   let data = d.data();
   let dataheadCount = 0;
-  console.log(data, dataheads);
 
   for (const key in data) {
     if (data.hasOwnProperty(key)) {
       let span = document.createElement('span');
       span.textContent = data[dataheads[dataheadCount++].textContent];
       div.appendChild(span);
-      console.log(key);
     }
   }
   dataset.appendChild(div);
