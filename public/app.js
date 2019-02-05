@@ -1,5 +1,7 @@
 const dataset = document.querySelector('.dataset');
 const dataheads = document.querySelectorAll('.data-head span');
+const loader = document.querySelector('.loader');
+dataset.style.display = 'none';
 
 // create element
 function renderData(d) {
@@ -17,11 +19,14 @@ function renderData(d) {
     }
   }
   dataset.appendChild(div);
+  loader.style.display = 'none';
+  dataset.style.display = 'block';
 }
 
 document.addEventListener('DOMContentLoaded', e => {
   const db = firebase.firestore();
   const automobiles = db.collection('automobiles');
+  loader.style.display = 'block';
 
   automobiles.get().then(data => {
     data.docs.forEach(doc => renderData(doc));
